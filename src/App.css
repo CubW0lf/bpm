@@ -1,0 +1,72 @@
+/*
+1. RESET
+2. Blocks
+3. Inline
+4. ID
+5. Classes
+*/
+
+:root {
+    --noir: #202426;
+    --blanc: #f2f0f0;
+}
+
+/* 1 RESET */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+/* 2 Block */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 3 inline */
+
+/* 4 ID */
+/* 5 Classes */

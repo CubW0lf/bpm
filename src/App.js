@@ -1,10 +1,10 @@
 import "./App.css";
-import Lecteur from "./components/Lecteur/Lecteur";
+import Bouton from "./components/Bouton/Bouton";
 
 function App() {
     return (
         <div className="App">
-            <Lecteur />
+            <Bouton />
         </div>
     );
 }
