@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import songs from "../../songs";
 import "./Bouton.css";
+import Lecteur from "../Lecteur/Lecteur";
 
 const Bouton = () => {
     const [mood, setMood] = useState("");
@@ -21,9 +22,9 @@ const Bouton = () => {
             setBpm(0);
             setMood("");
         } else {
-            if (bpm >= 60 && bpm <= 69) {
+            if (bpm <= 69) {
                 setMood("Meditation");
-                setFork([60, 85]);
+                setFork([0, 85]);
             } else if (bpm >= 70 && bpm <= 79) {
                 setMood("Chill");
                 setFork([85, 110]);
@@ -49,25 +50,24 @@ const Bouton = () => {
 
     console.log(playlist);
     return (
+        <>
         <div className="Bouton" onClick={handleBpm}>
             <span className="mood">
                 {mood !== "" ? mood : <span className="minify">Veuillez Placer votre Index sous le Flash</span>}
             </span>
-            <div className={`inner ${animation ? "animation" : ""}`}></div>
-            <div className="playlist">
-                {playlist.length !== 0 ? (
-                    <div className="song">
-                        <span>{playlist[0].Auteur}</span> -<span>{playlist[0].Titre}</span>
-                        <audio controls src={playlist[0].url}>
-                            Your browser does not support the
-                            <code>audio</code> element.
-                        </audio>
-                    </div>
-                ) : (
-                    "Ya pas de morceaux"
-                )}
-            </div>
+            <div className={`inner ${animation ? "animation" : ""}`}></div>  
         </div>
+        <div className="playlist">
+        {playlist.length !== 0 ? (
+            <div className="song">
+                <div className="song-meta"><span>{playlist[0].Auteur}</span> <span>{playlist[0].Titre}</span></div>
+                <Lecteur playlist={playlist} />
+            </div>
+        ) : (
+            "Ya pas de morceaux"
+        )}
+    </div>
+    </>
     );
 };
 
