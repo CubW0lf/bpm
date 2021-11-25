@@ -1,0 +1,69 @@
+.profildiv{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color : var(--white);
+
+}
+.profilUser{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 90px;
+  margin-bottom: 1rem;
+}
+
+.profildiv1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#e66465, #e5b391);
+  border-radius: 10px;
+  width: 70vw;
+  height: 50vh;
+  box-shadow: 10px 10px 10px black;
+}
+
+.profilh2{
+  text-shadow: #796161 1px 1px 1px;
+}
+.profilh4{
+  font-size: 15px;
+}
+
+.profilmusicfavoris{
+  margin-top: 2rem;
+  width: 60vw;
+  height: 50vh;
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ulprofil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  list-style: none;
+  width: 80%;
+}
+
+.liprofil{
+  width: 100%;
+}
+
+hr{
+  width: 100%;
+  height: 1px;
+}
+
+.favoris{
+  font-size: 40px;
+  margin-right: 2rem;
+  color : #e66465;
+}

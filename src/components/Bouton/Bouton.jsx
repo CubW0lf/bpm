@@ -7,6 +7,7 @@ const Bouton = () => {
     const [animation, setAnimation] = useState(false);
     const [bpm, setBpm] = useState(0);
     const [fork, setFork] = useState([]);
+    const [playlist, setPlaylist] = useState([]);
 
     // const musicFork = ["60-85", "85-110", "110-135", "135-160"];
     const handleBpm = () => {
@@ -36,9 +37,7 @@ const Bouton = () => {
         }
     }, [animation, bpm]);
 
-    console.log(songs);
-
-    console.log(bpm, mood, fork);
+    console.log(songs, fork);
 
     return (
         <div className="Bouton" onClick={handleBpm}>
