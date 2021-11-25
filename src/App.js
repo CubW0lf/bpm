@@ -3,6 +3,7 @@ import "./App.css";
 import Bouton from "./components/Bouton/Bouton";
 import Navbar from "./components/NavBar/NavBar";
 import Profil from "./components/Profil/Profil";
+import GenreBouton from "./components/GenreBouton/GenreBouton";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Bouton />} />
                     <Route path="/user" element={<Profil />} />
+                    <Route path="/genres" element={<GenreBouton />} />
                 </Routes>
             </main>
         </div>
