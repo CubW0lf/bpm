@@ -25,9 +25,9 @@
     height: 90%;
     border-radius: 50%;
     position: relative;
-    border: 2px solid #e3205e;
+    /* box-shadow: 0 -5px 0 var(--third), -5px 0 0 var(--secondary), 0 5px 0 var(--third), 5px 0 0 var(--secondary); */
     margin: auto;
-    margin-top: 2vh;
+    margin-top: 5vh;
 }
 
 .inner::before,
@@ -37,38 +37,42 @@
     border-radius: 50%;
 }
 
-.inner::before {
-    border: 2px solid #f32154;
+.inner.pulse::before {
+    border: 30px solid rgba(252, 54, 127, 0.5);
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    animation: pulse 1.5s ease-out infinite;
+}
+
+.inner::after {
+    border: 20px solid var(--secondary);
     top: 10px;
     right: 10px;
     bottom: 10px;
     left: 10px;
 }
 
-.inner::after {
-    border: 2px solid #f79157;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-    left: 25px;
+.inner svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.animation {
-    animation: spin 10s linear infinite;
-    border: none;
-    border-top: 2px solid #e3205e;
+.waveform {
+    width: 100vw;
+    stroke: var(--secondary);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
 }
 
-.animation::before {
-    animation: spin 7s linear infinite;
-    border: none;
-    border-top: 2px solid #f32154;
-}
-
-.animation::after {
-    animation: spin 10s linear infinite;
-    border: none;
-    border-top: 2px solid #f79157;
+.waveform.heart {
+    animation: heartBeat 1.5s ease-out infinite;
 }
 
 .minify {
@@ -77,12 +81,29 @@
     text-align: center;
 }
 
-@keyframes spin {
+@keyframes heartBeat {
     from {
-        transform: rotate(0);
+        stroke-dashoffset: 1;
     }
     to {
-        transform: rotate(360deg);
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulse {
+    from {
+        border-width: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    to {
+        border-width: 60px;
+        top: -27px;
+        right: -27px;
+        bottom: -27px;
+        left: -27px;
     }
 }
 
