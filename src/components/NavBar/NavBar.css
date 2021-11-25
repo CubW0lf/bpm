@@ -1,0 +1,30 @@
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background-color: #535353;
+  color: white;
+  padding: 1rem;
+}
+
+.burger{
+  width: 3rem;
+  height: 2rem;
+}
+.logo{
+  font-size: 15px;
+
+}
+
+.profil{
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.8;
+}
+
+.profil{
+  border-radius: 50px;
+  width: 2rem;
+}

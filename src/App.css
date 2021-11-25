@@ -69,12 +69,14 @@ body {
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--body);
 }
 
 /* 3 inline */
 
 p {
     font-family: var(--font);
+    
 }
 
 /* 4 ID */
