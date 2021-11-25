@@ -64,6 +64,7 @@ h6 {
 html,
 body {
     height: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -72,13 +73,31 @@ body {
     background-color: var(--body);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2vw;
+    flex: 1;
+    height: 100%;
+}
+
 /* 3 inline */
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
 
 p {
     font-family: var(--font);
-    color : var(--white);
-    text-align: center;
 }
 
 /* 4 ID */
 /* 5 Classes */
+
+.App,
+.root {
+    height: 100vh;
+}

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 .profildiv{
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   color : var(--white);
+  width: 100%;
 }
 .profilUser{
   width: 12rem;
@@ -35,13 +36,12 @@
 
 .detailprofil{
   display: flex;
-  width: 85%;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
-  text-align: center;
+  justify-content: space-around;
+  text-align: end;
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
-  padding-right: 2rem;
 }
 
 .profilh4{
@@ -58,9 +58,8 @@
 }
 
 .profilmusicfavoris{
-margin-top: 1rem;
+  margin-top: 1rem;
   width: 100%;
-  height: 100%;
   border: solid white 1px;
   border-radius: 10px;
   display: flex;
@@ -77,13 +76,13 @@ margin-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 0;
   list-style: none;
-  width: 90%;
+  width: 100%;
   position: relative;
 }
 
 .liprofil{
   width: 100%;
-  font-size: 15px;
+  font-size: 14px;
   padding-top: 1rem;
 }
 
@@ -98,15 +97,24 @@ hr{
 }
 
 .favoris{
-  font-size: 40px;
-  margin-right: 2rem;
+  font-size: 35px;
+  margin-right: 1rem;
   color : white;
 }
 
 .close{
-  width: 100%;
+ 
  font-size: 20px;
  position: absolute;
- left: 6rem;
+ 
+ right: 10px;
 
+
+}
+
+@media screen and (min-width: 500px) {
+  .profildiv {
+    padding-left: 45rem;
+    padding-right: 45rem;
+  }
 }

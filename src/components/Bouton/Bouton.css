@@ -1,0 +1,104 @@
+.Bouton {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+}
+
+.mood {
+    color: var(--secondary);
+    font-family: var(--font);
+    font-size: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #e3205e;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+.inner::before,
+.inner::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.inner::before {
+    border: 2px solid #f32154;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+}
+
+.inner::after {
+    border: 2px solid #f79157;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+}
+
+.animation {
+    animation: spin 10s linear infinite;
+    border: none;
+    border-top: 2px solid #e3205e;
+}
+
+.animation::before {
+    animation: spin 7s linear infinite;
+    border: none;
+    border-top: 2px solid #f32154;
+}
+
+.animation::after {
+    animation: spin 10s linear infinite;
+    border: none;
+    border-top: 2px solid #f79157;
+}
+
+.minify {
+    font-size: 5vw;
+    width: 40%;
+    text-align: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 95%;
+    padding: 1vw;
+    margin-top: 10vh;
+}
+
+.song {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 5vw;
+}
