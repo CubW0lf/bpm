@@ -9,7 +9,7 @@
 
 :root {
     --body: #232021;
-    --nav: #535353;
+    --nav: #2c2c2c;
     --secondary: #fc387f;
     --third: #faa658;
     --white: white;
@@ -76,7 +76,8 @@ body {
 
 p {
     font-family: var(--font);
-    
+    color : var(--white);
+    text-align: center;
 }
 
 /* 4 ID */

@@ -1,5 +1,4 @@
 import './NavBar.css';
-import profil from '../../assets/profil.png';
 import {AiOutlineMenu} from 'react-icons/ai';
 import {FaUserAlt} from 'react-icons/fa';
 import {Link} from "react-router-dom";
