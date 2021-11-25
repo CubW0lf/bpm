@@ -6,8 +6,10 @@ function App() {
     return (
         <div className="App">
             <Navbar />
-        <p className="connexiontexte">Veuillez connecter votre SmartWatch.</p>
-            <Bouton />
+            <main>
+                <p className="connexiontexte">Veuillez connecter votre SmartWatch.</p>
+                <Bouton />
+            </main>
         </div>
     );
 }
