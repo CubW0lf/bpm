@@ -13,6 +13,5 @@ const Lecteur = () => {
       />
     </div>
   );
-};
 
 export default Lecteur;
