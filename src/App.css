@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;900&display=swap");
 /*
 1. RESET
 2. Blocks
@@ -7,8 +8,12 @@
 */
 
 :root {
-    --noir: #202426;
-    --blanc: #f2f0f0;
+    --body: #232021;
+    --nav: #535353;
+    --secondary: #fc387f;
+    --third: #faa658;
+    --white: white;
+    --font: "Montserrat", sans-serif;
 }
 
 /* 1 RESET */
@@ -67,6 +72,10 @@ body {
 }
 
 /* 3 inline */
+
+p {
+    font-family: var(--font);
+}
 
 /* 4 ID */
 /* 5 Classes */
