@@ -1,15 +1,21 @@
 import './NavBar.css';
 import profil from '../../assets/profil.png';
 import {AiOutlineMenu} from 'react-icons/ai';
+import {FaUserAlt} from 'react-icons/fa';
+import {Link} from "react-router-dom";
+
 
 const Navbar = () => {
 
   return(
     <div className="header-container">
-         <AiOutlineMenu />
-      <h1 className="logo">BeatPerMove</h1>
-      <img src={profil} alt="profil" className="profil"/>
-  
+         <AiOutlineMenu className="burger"/>
+         <Link to={'/'}>
+      <h1 className="logo">Beat Per Move</h1>
+      </Link>
+      <Link to={'/user'}>
+      <FaUserAlt className="logouser"/>
+      </Link>
     </div>
   )
 }
