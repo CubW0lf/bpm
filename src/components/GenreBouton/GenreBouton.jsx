@@ -60,14 +60,14 @@ const GenreBouton = () => {
   return(
     <div className='containerGenreBouton'>
      <button className='genreBouton' onClick={playSongPop}>POP</button>
-     {/* <button  className='butonGenreRock' onClick={}>Rock{audio}</button>
+     <button  className='butonGenreRock' onClick={}>Rock{audio}</button>
      <button  className='butonGenreRap' onClick={}>Rap</button>
      <button  className='butonGenreRnb' onClick={}>Rnb</button>
      <button  className='butonGenreDance' onClick={}>Dance</button>
      <button  className='butonGenreVariete' onClick={}>Variete</button>
      <button  className='butonGenreAmbient' onClick={}>Ambient</button>
      <button  className='butonGenreFunk' onClick={}>Funk</button>
-     <button  className='butonGenreClassique' onClick={}>Classique</button> */}
+     <button  className='butonGenreClassique' onClick={}>Classique</button> 
      </div>
     )
 }
