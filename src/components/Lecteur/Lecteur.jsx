@@ -1,10 +1,11 @@
-import ReactAudioPlayer from "react-audio-player";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 import "./Lecteur.css";
 
-const Lecteur = () => {
+const Lecteur = ({ playlist }) => {
     return (
         <div>
-            <ReactAudioPlayer src="my_audio_file.ogg" autoPlay controls />
+            <AudioPlayer autoPlay src={playlist[0].url} onPlay={(e) => console.log("onPlay")} />
         </div>
     );
 };
