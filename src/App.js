@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Bouton from "./components/Bouton/Bouton";
 import GenreBouton from "./components/GenreBouton/GenreBouton";
 import Navbar from "./components/NavBar/NavBar";
 import Profil from "./components/Profil/Profil";
-
+import "./App.css";
+import "./desktop.css";
 
 function App() {
     return (

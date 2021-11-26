@@ -1,0 +1,13 @@
+@media (max-width: 1367px) {
+    main {
+        min-height: 150vh !important;
+    }
+
+    .playlist {
+        position: relative !important;
+    }
+
+    .mood {
+        font-size: 5vw;
+    }
+}

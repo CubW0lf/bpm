@@ -209,21 +209,25 @@ button:focus {
 }
 
 .border {
-    border-bottom: 1vh solid transparent;
     transform: scale(0);
     transition: 0.5s ease-out;
     transform-origin: top;
-    height: 1vh;
+    height: 0.5vh;
     padding: 0;
     margin: 0;
+}
+
+.sorry {
+    color: var(--white);
+    font-size: 7vw;
+    text-align: center;
 }
 
 .border.active {
     background-color: var(--secondary);
     transition: 1s ease-out;
-    height: 1vh;
     transform: scale(1);
-    transform-origin: top;
+    transform-origin: center top;
 }
 
 .playlist-full {

@@ -48,7 +48,7 @@ const Bouton = () => {
                 setFork([110, 135]);
             } else if (bpm >= 90) {
                 setMood("Energy");
-                setFork([135, 160]);
+                setFork([135, 180]);
             }
         }
     }, [animation, bpm]);
@@ -87,30 +87,12 @@ const Bouton = () => {
                 list.push(songs[i]);
             }
         }
-        function shuffle(array) {
-            var currentIndex = array.length,
-                temporaryValue,
-                randomIndex;
-
-            while (0 !== currentIndex) {
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-
-                temporaryValue = array[currentIndex];
-                array[currentIndex] = array[randomIndex];
-                array[randomIndex] = temporaryValue;
-            }
-
-            return array;
-        }
         setPlaylist(list);
     }, [fork, current]);
 
     const handleWatch = () => {
         setWatch(!watch);
     };
-
-    console.log(playlist);
 
     return (
         <>
@@ -134,7 +116,7 @@ const Bouton = () => {
             {active === "mini" ? (
                 <>
                     <div className="Bouton">
-                        <span className="mood">{mood !== "" ? mood : ""}</span>
+                        <span className="mood">{mood !== "" ? mood : animationHeart ? "" : "Activer"}</span>
                         <div className={`inner ${animation ? "pulse" : ""}`} onClick={handleBpm}>
                             <svg
                                 width="253"
@@ -155,7 +137,7 @@ const Bouton = () => {
                 </>
             ) : (
                 <div className="Bouton">
-                    {playlist &&
+                    {playlist.length !== 0 ? (
                         playlist.map((s, index) => (
                             <div className="playlist-full" key={index}>
                                 <div className="song-full">
@@ -163,14 +145,17 @@ const Bouton = () => {
                                     <span className="artiste">{s.Auteur}</span>
                                 </div>
                             </div>
-                        ))}
+                        ))
+                    ) : (
+                        <p className="sorry">Pas de playlist chargée</p>
+                    )}
                 </div>
             )}
             <div className="playlist">
                 {playlist.length !== 0 ? (
                     <div className="song">
                         <div className="song-meta">
-                            <span>{playlist[current].Auteur}</span> <span>{playlist[current].Titre}</span>
+                            <span>{playlist[current]?.Auteur}</span> <span>{playlist[current]?.Titre}</span>
                         </div>
                         <Lecteur autoplay playlist={playlist} current={current} setCurrent={setCurrent} />
                     </div>
