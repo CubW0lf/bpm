@@ -76,9 +76,11 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 2vw;
+    flex: 1;
+    height: 100%;
 }
 
 /* 3 inline */
@@ -94,3 +96,8 @@ p {
 
 /* 4 ID */
 /* 5 Classes */
+
+.App,
+.root {
+    height: 100vh;
+}

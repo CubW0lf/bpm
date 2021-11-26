@@ -5,6 +5,7 @@ import GenreBouton from "./components/GenreBouton/GenreBouton";
 import Navbar from "./components/NavBar/NavBar";
 import Profil from "./components/Profil/Profil";
 
+
 function App() {
     return (
         <div className="App">

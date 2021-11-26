@@ -1,62 +1,64 @@
-import "./genreBouton.css";
-import Rock from "../../assets/rock.mp3"
 import { useState } from "react";
+import "./genreBouton.css";
+import Pop from "../../assets/pop.mp3"
+import Rock from "../../assets/rock.mp3"
+
 const GenreBouton = () => {
 const [audio, setAudio] = useState(false);
   
   const playSongPop = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Pop;
     song.play();
   }
 
-  const playSongRock = () => {
-    const song = new Audio();
-    song.src = Rock;
-    song.play();
-  }
+    const playSongRock = () => {
+        const song = new Audio();
+        song.src = Rock;
+        song.play();
+    };
 
   const playSongRap = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Rap;
     song.play();
-  }
+  };
 
-  const playSongRNB = () => {
+  const playSongRnb = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Rnb;
     song.play();
-  }
+  };
 
   const playSongDance = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Dance;
     song.play();
-  }
+  };
 
   const playSongVariete = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Variete;
     song.play();
-  }
+  };
 
   const playSongAmbient = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Ambient;
     song.play();
-  }
+  };
 
   const playSongFunk = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Funk;
     song.play();
-  }
+  };
 
   const playSongClassique = () => {
     const song = new Audio();
-    song.src = Rock;
+    song.src = Classique;
     song.play();
-  }
+  };
 
   return(
   <div className='allcontainerbouton'>
@@ -85,8 +87,6 @@ const [audio, setAudio] = useState(false);
     </div>
   </div>    
     )
-}
-
-
+};
 
 export default GenreBouton;
