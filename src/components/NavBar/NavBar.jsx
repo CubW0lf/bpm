@@ -7,8 +7,8 @@ const Navbar = () => {
     return (
         <div className="header-container">
             <AiOutlineMenu className="burger" />
-            <Link to={"/"}>
-                <h1 className="logo">Beat Per Move</h1>
+            <Link to={"/"} className="logo">
+                <h1>Beat Per Move</h1>
             </Link>
             <Link to={"/user"}>
                 <FaUserAlt className="logouser" />

@@ -4,7 +4,7 @@ const csv = [
     "London Grammar,Rooting For You,Giovanni,Chill,112,https://wdii.infraroth.com/bpm/london-grammar-rooting-for-you.mp3",
     "Orelsan,L'Odeur de l'Essence,Giovanni,Casual,117,https://wdii.infraroth.com/bpm/orelsan-lodeur-de-lessence-clip-officiel.mp3",
     "HAIM,Want You Back,Giovanni,Casual,112,https://wdii.infraroth.com/bpm/haim-want-you-back-official-video.mp3",
-    "Slipknot,People Egal shit,Giovanni,Energy,123,https://wdii.infraroth.com/bpm/",
+    "Slipknot,People Egal shit,Giovanni,Energy,123,https://wdii.infraroth.com/bpm/slipknot-people-shit-audio.mp3",
     "Sepultura,Refuse/Resist,Giovanni,Energy,117,https://wdii.infraroth.com/bpm/sepultura-refuseresist-official-video.mp3",
     "Mariana Froes,Girassóis de Van Gogh,Kévin,mood,136,https://wdii.infraroth.com/bpm/girassois-de-van-gogh-baco-exu-do-blues-cover.mp3",
     "Silent Poets,Asylum For The Feeling,Kévin,mood,161,https://wdii.infraroth.com/bpm/silent-poets-asylum-for-the-feeling.mp3",

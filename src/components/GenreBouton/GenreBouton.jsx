@@ -2,6 +2,13 @@ import { useState } from "react";
 import "./genreBouton.css";
 import Pop from "../../assets/pop.mp3"
 import Rock from "../../assets/rock.mp3"
+import Rap from "../../assets/rap.mp3"
+import Rnb from "../../assets/rnb.mp3"
+import Dance from "../../assets/dance.mp3"
+import Variete from "../../assets/variete.mp3"
+import Ambient from "../../assets/ambient.mp3"
+import Funk from "../../assets/funk.mp3"
+import Classique from "../../assets/classique.mp3"
 
 const GenreBouton = () => {
 const [audio, setAudio] = useState(false);
@@ -57,19 +64,20 @@ const [audio, setAudio] = useState(false);
   const playSongClassique = () => {
     const song = new Audio();
     song.src = Classique;
+    <button class="pulse">Pulse</button>
     song.play();
   };
 
   return(
   <div className='allcontainerbouton'>
     <div className='containerGenreBouton'>
-     <button className='genreBouton' onClick={playSongPop}>POP</button>
+     <button className='genreBouton' onClick={playSongPop}>Pop</button>
      <button  className='butonGenreRock' onClick={playSongRock}>Rock{audio}</button>
     </div>
 
     <div className='containerGenreBouton'>
      <button  className='butonGenreRap' onClick={playSongRap}>Rap</button>
-     <button  className='butonGenreRnb' onClick={playSongRNB}>Rnb</button>
+     <button  className='butonGenreRnb' onClick={playSongRnb}>Rnb</button>
     </div>
 
     <div className='containerGenreBouton'>
@@ -87,6 +95,9 @@ const [audio, setAudio] = useState(false);
     </div>
   </div>    
     )
-};
+  };
+
+
+
 
 export default GenreBouton;

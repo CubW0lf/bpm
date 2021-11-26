@@ -11,7 +11,6 @@ function App() {
         <div className="App">
             <Navbar />
             <main>
-                <p className="connexiontexte">Veuillez connecter votre SmartWatch.</p>
                 <Routes>
                     <Route path="/" element={<Bouton />} />
                     <Route path="/user" element={<Profil />} />
