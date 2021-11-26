@@ -1,4 +1,4 @@
-@media (max-width: 1367px) {
+@media (min-width: 1367px) {
     main {
         min-height: 150vh !important;
     }
