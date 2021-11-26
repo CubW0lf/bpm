@@ -5,15 +5,17 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="header-container">
-            <AiOutlineMenu className="burger" />
-            <Link to={"/"} className="logo">
-                <h1>Beat Per Move</h1>
-            </Link>
-            <Link to={"/user"}>
-                <FaUserAlt className="logouser" />
-            </Link>
-        </div>
+        <nav>
+            <div className="header-container">
+                <AiOutlineMenu className="burger" />
+                <Link to={"/"} className="logo">
+                    <h1>Beat Per Move</h1>
+                </Link>
+                <Link to={"/user"}>
+                    <FaUserAlt className="logouser" />
+                </Link>
+            </div>
+        </nav>
     );
 };
 

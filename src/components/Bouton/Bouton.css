@@ -181,3 +181,75 @@
 .rhap_volume-indicator {
     background-color: var(--third);
 }
+
+button:hover,
+button:active,
+button:focus {
+    border: 0 solid transparent;
+}
+
+/* Mini / Full */
+
+.minifull {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--nav);
+    padding-bottom: 2vh;
+    width: 100%;
+}
+
+.mini,
+.full {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.border {
+    border-bottom: 1vh solid transparent;
+    transform: scale(0);
+    transition: 0.5s ease-out;
+    transform-origin: top;
+    height: 1vh;
+    padding: 0;
+    margin: 0;
+}
+
+.border.active {
+    background-color: var(--secondary);
+    transition: 1s ease-out;
+    height: 1vh;
+    transform: scale(1);
+    transform-origin: top;
+}
+
+.playlist-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.song-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+.titre {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 100;
+}
+
+.artiste {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 700;
+}
