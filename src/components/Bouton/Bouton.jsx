@@ -24,7 +24,7 @@ const Bouton = () => {
                 setAnimationHeart(false);
                 setAnimation(true);
                 setBpm(Math.floor(Math.random() * (100 - 60) + 60));
-                navigator.vibrate(1000);
+                window.navigator.vibrate(200);
             }, 5000);
         } else if (!animationHeart && animation) {
             setAnimationHeart(false);
