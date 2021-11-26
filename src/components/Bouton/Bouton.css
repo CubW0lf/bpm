@@ -1,17 +1,18 @@
 .Bouton {
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
     position: relative;
+    margin-top: 5vh;
 }
 
 .mood {
     color: var(--secondary);
     font-family: var(--font);
-    font-size: 10vw;
+    font-size: 7vw;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -80%);
     opacity: 0.7;
     width: 100%;
     display: flex;
@@ -20,14 +21,26 @@
     align-items: center;
 }
 
+.connexiontexte {
+    color: var(--nav);
+}
+
 .inner {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     position: relative;
     /* box-shadow: 0 -5px 0 var(--third), -5px 0 0 var(--secondary), 0 5px 0 var(--third), 5px 0 0 var(--secondary); */
     margin: auto;
-    margin-top: 5vh;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    /* box-shadow: 0 -5px 0 var(--third), -5px 0 0 var(--secondary), 0 5px 0 var(--third), 5px 0 0 var(--secondary); */
+    margin: auto;
 }
 
 .inner::before,
@@ -108,18 +121,58 @@
 }
 
 .playlist {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    width: 95%;
-    padding: 1vw;
-    margin-top: 10vh;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
 }
 
 .song {
     color: var(--white);
     font-family: var(--font);
     font-size: 5vw;
+}
+
+/* lecteur */
+
+.rhap_container {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.rhap_time {
+    color: var(--third);
+}
+
+.rhap_progress-filled,
+.rhap_progress-indicator {
+    background: var(--third);
+}
+
+.rhap_download-progress,
+.rhap_progress-bar-show-download {
+    background-color: var(--secondary);
+}
+
+.rhap_main-controls-button,
+.rhap_main-controls-button:hover,
+.rhap_main-controls-button:active,
+.rhap_volume-button:hover,
+.rhap_volume-button:active,
+.rhap_volume-button,
+.rhap_volume-button:hover,
+.rhap_volume-button:active {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.rhap_repeat-button,
+.rhap_repeat-button:hover,
+.rhap_repeat-button:active .rhap_volume-button {
+    color: var(--third);
+}
+
+.rhap_volume-bar,
+.rhap_volume-indicator {
+    background-color: var(--third);
 }
