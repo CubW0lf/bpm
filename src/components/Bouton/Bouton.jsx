@@ -24,12 +24,12 @@ const Bouton = () => {
                 setAnimationHeart(false);
                 setAnimation(true);
                 setBpm(Math.floor(Math.random() * (100 - 60) + 60));
-                window.navigator.vibrate(200);
             }, 5000);
         } else if (!animationHeart && animation) {
             setAnimationHeart(false);
             setAnimation(false);
         }
+        window.navigator.vibrate(1000);
         setFork([]);
     };
 
