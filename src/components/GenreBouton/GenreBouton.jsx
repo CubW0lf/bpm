@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./genreBouton.css";
 import Pop from "../../assets/pop.mp3"
 import Rock from "../../assets/rock.mp3"
@@ -11,7 +10,6 @@ import Funk from "../../assets/funk.mp3"
 import Classique from "../../assets/classique.mp3"
 
 const GenreBouton = () => {
-const [audio, setAudio] = useState(false);
   
   const playSongPop = () => {
     const song = new Audio();
@@ -68,31 +66,17 @@ const [audio, setAudio] = useState(false);
   };
 
   return(
-  <div className='allcontainerbouton'>
-    <div className='containerGenreBouton'>
-     <button className='genreBouton' onClick={playSongPop}>Pop</button>
-     <button  className='butonGenreRock' onClick={playSongRock}>Rock{audio}</button>
-    </div>
-
-    <div className='containerGenreBouton'>
-     <button  className='butonGenreRap' onClick={playSongRap}>Rap</button>
-     <button  className='butonGenreRnb' onClick={playSongRnb}>Rnb</button>
-    </div>
-
-    <div className='containerGenreBouton'>
-     <button  className='butonGenreDance' onClick={playSongDance}>Dance</button>
-     <button  className='butonGenreVariete' onClick={playSongVariete}>Variete</button>
-    </div>
-
-    <div className='containerGenreBouton'>
-     <button  className='butonGenreAmbient' onClick={playSongAmbient}>Ambient</button>
-     <button  className='butonGenreFunk' onClick={playSongFunk}>Funk</button>
-    </div>
- 
-    <div className='containerGenreBoutonclassique'>
-     <button  className='butonGenreClassique' onClick={playSongClassique}>Classique</button> 
-    </div>
-  </div>    
+  <div className='containerButton'> 
+     <button className='pulseBouton' onClick={playSongPop}>POP</button>
+     <button  className='pulseBouton' onClick={playSongRock}>ROCK</button>
+     <button  className='pulseBouton' onClick={playSongRap}>RAP</button>
+     <button  className='pulseBouton' onClick={playSongRnb}>RNB</button>
+     <button  className='pulseBouton' onClick={playSongDance}>DANCE</button>
+     <button  className='pulseBouton' onClick={playSongVariete}>VARIÉTÉ</button>
+     <button  className='pulseBouton' onClick={playSongAmbient}>AMBIANT</button>
+     <button  className='pulseBouton' onClick={playSongFunk}>FUNK</button>
+    <button  className='pulseBouton' onClick={playSongClassique}>CLASSIQUE</button> 
+    </div> 
     )
 };
 
