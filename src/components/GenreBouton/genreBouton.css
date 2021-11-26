@@ -1,3 +1,10 @@
+.butonGenreClassique{
+      width: 50%;
+    margin-left: 25%;
+}
+.allcontainerbouton{
+  width: 100%;
+}
 .containerGenreBoutton{
   display: flex;
   flex-wrap: wrap;
@@ -6,10 +13,19 @@
   width: 65%;
   height: auto;
 }
+.containerGenreBouton{
+  display: flex;
+  flex-direction: row;
+}
+.containerGenreBoutonclassique{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 button{
-  height: 4em;
+  height: 2em;
   width: 15em;  
-  margin: 20px;
+  margin: 5px;
 }
 button:hover{
   color: white;
