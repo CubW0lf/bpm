@@ -13,14 +13,18 @@ const Bouton = () => {
 
     // const musicFork = ["60-85", "85-110", "110-135", "135-160"];
     const handleBpm = () => {
-        if (!animation) {
+        if (!animationHeart && !animation) {
             setAnimationHeart(true);
-        }
-        setTimeout(() => {
-            setBpm(Math.floor(Math.random() * (100 - 60) + 60));
+            setAnimation(false);
+            setTimeout(() => {
+                setBpm(Math.floor(Math.random() * (100 - 60) + 60));
+                setAnimationHeart(false);
+                setAnimation(true);
+            }, 5000);
+        } else if (!animationHeart && animation) {
             setAnimationHeart(false);
-            setAnimation(!animation);
-        }, 5000);
+            setAnimation(false);
+        }
         setFork([]);
     };
 
@@ -55,10 +59,9 @@ const Bouton = () => {
         setPlaylist(list);
     }, [fork]);
 
-    console.log(animation);
-
     return (
         <div className="Bouton">
+            <p className="connexiontexte">Veuillez connecter votre SmartWatch.</p>
             <span className="mood">{mood !== "" ? mood : ""}</span>
             <div className={`inner ${animation ? "pulse" : ""}`} onClick={handleBpm}>
                 <svg width="253" height="126" viewBox="0 0 253 126" fill="none" xmlns="http://www.w3.org/2000/svg">

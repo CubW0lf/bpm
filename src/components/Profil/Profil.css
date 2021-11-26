@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 .profildiv{
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   color : var(--white);
-
+  width: 100%;
 }
 .profilUser{
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 90px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .profildiv1{
@@ -18,13 +20,36 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#e66465, #e5b391);
+  background: linear-gradient(#e86b57, #c452a7, #9868d9);
   border-radius: 10px;
-  width: 70vw;
+  width: 100%;
   height: 50vh;
-  box-shadow: 10px 10px 10px black;
+  border : solid white 1px; 
+  position: relative;
 }
 
+.edit{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.detailprofil{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  text-align: end;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.profilh4{
+  color : wheat;
+}
+.note{
+  font-size: 30px;
+}
 .profilh2{
   text-shadow: #796161 1px 1px 1px;
 }
@@ -33,14 +58,15 @@
 }
 
 .profilmusicfavoris{
-  margin-top: 2rem;
-  width: 60vw;
-  height: 50vh;
-
+  margin-top: 1rem;
+  width: 100%;
+  border: solid white 1px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 1rem;
+  background: linear-gradient(#6f7de0, #ae55cb, #d65bab);
 }
 
 .ulprofil{
@@ -50,20 +76,45 @@
   padding-bottom: 1rem;
   padding-left: 0;
   list-style: none;
-  width: 80%;
+  width: 100%;
+  position: relative;
 }
 
 .liprofil{
   width: 100%;
+  font-size: 14px;
+  padding-top: 1rem;
+}
+
+.liprofil p {
+  text-align: start;
 }
 
 hr{
   width: 100%;
   height: 1px;
+  margin-top: 1rem;
 }
 
 .favoris{
-  font-size: 40px;
-  margin-right: 2rem;
-  color : #e66465;
+  font-size: 35px;
+  margin-right: 1rem;
+  color : white;
+}
+
+.close{
+ 
+ font-size: 20px;
+ position: absolute;
+ 
+ right: 10px;
+
+
+}
+
+@media screen and (min-width: 500px) {
+  .profildiv {
+    padding-left: 45rem;
+    padding-right: 45rem;
+  }
 }
