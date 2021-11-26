@@ -10,20 +10,11 @@ import Funk from "../../assets/audio/funk.mp3";
 import Classique from "../../assets/audio/classique.mp3";
 
 const GenreBouton = () => {
-<<<<<<< HEAD
     const playSongPop = () => {
         const song = new Audio();
         song.src = Pop;
         song.play();
     };
-=======
-  
-  const playSongPop = () => {
-    const song = new Audio();
-    song.src = Pop;
-    song.play();
-  }
->>>>>>> 7ec1bfc5625dfaff8a9b32dac9b984dce00228ca
 
     const playSongRock = () => {
         const song = new Audio();
@@ -74,66 +65,36 @@ const GenreBouton = () => {
     };
 
     return (
-        <div className="allcontainerbouton">
-            <div className="containerGenreBouton">
-                <button className="genreBouton" onClick={playSongPop}>
-                    Pop
-                </button>
-                <button className="butonGenreRock" onClick={playSongRock}>
-                    Rock
-                </button>
-            </div>
-
-<<<<<<< HEAD
-            <div className="containerGenreBouton">
-                <button className="butonGenreRap" onClick={playSongRap}>
-                    Rap
-                </button>
-                <button className="butonGenreRnb" onClick={playSongRnb}>
-                    Rnb
-                </button>
-            </div>
-
-            <div className="containerGenreBouton">
-                <button className="butonGenreDance" onClick={playSongDance}>
-                    Dance
-                </button>
-                <button className="butonGenreVariete" onClick={playSongVariete}>
-                    Variete
-                </button>
-            </div>
-
-            <div className="containerGenreBouton">
-                <button className="butonGenreAmbient" onClick={playSongAmbient}>
-                    Ambient
-                </button>
-                <button className="butonGenreFunk" onClick={playSongFunk}>
-                    Funk
-                </button>
-            </div>
-
-            <div className="containerGenreBoutonclassique">
-                <button className="butonGenreClassique" onClick={playSongClassique}>
-                    Classique
-                </button>
-            </div>
+        <div className="containerButton">
+            <button className="pulseBouton" onClick={playSongPop}>
+                POP
+            </button>
+            <button className="pulseBouton" onClick={playSongRock}>
+                ROCK
+            </button>
+            <button className="pulseBouton" onClick={playSongRap}>
+                RAP
+            </button>
+            <button className="pulseBouton" onClick={playSongRnb}>
+                RNB
+            </button>
+            <button className="pulseBouton" onClick={playSongDance}>
+                DANCE
+            </button>
+            <button className="pulseBouton" onClick={playSongVariete}>
+                VARIÉTÉ
+            </button>
+            <button className="pulseBouton" onClick={playSongAmbient}>
+                AMBIANT
+            </button>
+            <button className="pulseBouton" onClick={playSongFunk}>
+                FUNK
+            </button>
+            <button className="pulseBouton" onClick={playSongClassique}>
+                CLASSIQUE
+            </button>
         </div>
     );
-=======
-  return(
-  <div className='containerButton'> 
-     <button className='pulseBouton' onClick={playSongPop}>POP</button>
-     <button  className='pulseBouton' onClick={playSongRock}>ROCK</button>
-     <button  className='pulseBouton' onClick={playSongRap}>RAP</button>
-     <button  className='pulseBouton' onClick={playSongRnb}>RNB</button>
-     <button  className='pulseBouton' onClick={playSongDance}>DANCE</button>
-     <button  className='pulseBouton' onClick={playSongVariete}>VARIÉTÉ</button>
-     <button  className='pulseBouton' onClick={playSongAmbient}>AMBIANT</button>
-     <button  className='pulseBouton' onClick={playSongFunk}>FUNK</button>
-    <button  className='pulseBouton' onClick={playSongClassique}>CLASSIQUE</button> 
-    </div> 
-    )
->>>>>>> 7ec1bfc5625dfaff8a9b32dac9b984dce00228ca
 };
 
 export default GenreBouton;
