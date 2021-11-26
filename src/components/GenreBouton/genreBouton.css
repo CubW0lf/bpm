@@ -1,0 +1,99 @@
+.butonGenreClassique{
+      width: 50%;
+    margin-left: 25%;
+}
+.allcontainerbouton{
+  width: 100%;
+}
+.containerGenreBoutton{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: auto;
+}
+.containerGenreBouton{
+  display: flex;
+  flex-direction: row;
+}
+.containerGenreBoutonclassique{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+button{
+  height: 2em;
+  width: 15em;  
+  margin: 5px;
+}
+button:hover{
+  color: white;
+  border-style:groove;
+}
+
+.butonGenrePop {
+    background-color: #79DA60;
+  }
+  .butonGenrePop:hover{
+      border-color: #87e071;
+      box-shadow: 0px 5px 9px #87e071;
+    }
+  
+  .butonGenreRock{
+  background-color: #FAA658;
+}
+.butonGenreRock:hover{
+  border-color: #FAA658;
+  box-shadow: 0px 5px 9px #FAA658; 
+}
+.butonGenreRap{
+ background-color: #FA5858;
+}
+.butonGenreRap:hover{
+ border-color:  #FA5858 ;
+ box-shadow: 0px 5px 9px #fb5f5f;
+}
+.butonGenreRnb{
+  background-color: #7EB5E8 ;
+}
+.butonGenreRnb:hover{
+  border-color:  #7EB5E8 ;
+  box-shadow: 0px 5px 9px #7EB5E8;
+}
+.butonGenreDance{
+  background-color: #79DA60;
+}
+.butonGenreDance:hover{
+  border-color: #79DA60;
+   box-shadow: 0px 5px 9px #79DA60;
+}
+.butonGenreVariete{
+ background-color: #9152F6 ;
+}
+.butonGenreVariete:hover{
+ border-color: #9152F6;
+ box-shadow: 0px 5px 9px #9152F6;
+}
+.butonGenreAmbient{
+background-color: #F2CB3E;
+
+}
+.butonGenreAmbient:hover{
+border-color: #F2CB3E;
+  box-shadow: 0px 5px 9px #F2CB3E;
+}
+.butonGenreFunk{
+ background-color: #F652e6;
+}
+.butonGenreFunk:hover{
+border-color: #F652e6;
+  box-shadow: 0px 5px 9px #F652e6;
+}
+.butonGenreClassique{
+background-color: #3A9B6C; 
+}
+.butonGenreClassique:hover{
+border-color: #3A9B6C;
+ box-shadow: 0px 5px 9px #3A9B6C;
+}

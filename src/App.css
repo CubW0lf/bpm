@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700;900&display=swap");
+/*
+1. RESET
+2. Blocks
+3. Inline
+4. ID
+5. Classes
+*/
+
+:root {
+    --body: #232021;
+    --nav: #535353;
+    --secondary: #fc387f;
+    --third: #faa658;
+    --white: white;
+    --font: "Montserrat", sans-serif;
+}
+
+/* 1 RESET */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+/* 2 Block */
+
+html,
+body {
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--body);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+}
+
+/* 3 inline */
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+p {
+    font-family: var(--font);
+}
+
+/* 4 ID */
+/* 5 Classes */
+
+.App,
+.root {
+    height: 100vh;
+}

@@ -1,0 +1,259 @@
+.Bouton {
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    margin-top: 5vh;
+}
+
+.mood {
+    color: var(--secondary);
+    font-family: var(--font);
+    font-size: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch {
+    width: 46px;
+    height: 46px;
+}
+
+.connexiontexte {
+    color: var(--nav);
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    /* box-shadow: 0 -5px 0 var(--third), -5px 0 0 var(--secondary), 0 5px 0 var(--third), 5px 0 0 var(--secondary); */
+    margin: auto;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    /* box-shadow: 0 -5px 0 var(--third), -5px 0 0 var(--secondary), 0 5px 0 var(--third), 5px 0 0 var(--secondary); */
+    margin: auto;
+}
+
+.inner::before,
+.inner::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.inner.pulse::before {
+    border: 30px solid rgba(252, 54, 127, 0.5);
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    animation: pulse 1.5s ease-out infinite;
+}
+
+.inner::after {
+    border: 20px solid var(--secondary);
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+}
+
+.inner svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.waveform {
+    width: 100vw;
+    stroke: var(--secondary);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.waveform.heart {
+    animation: heartBeat 1.5s ease-out infinite;
+}
+
+.minify {
+    font-size: 5vw;
+    width: 40%;
+    text-align: center;
+}
+
+@keyframes heartBeat {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulse {
+    from {
+        border-width: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    to {
+        border-width: 60px;
+        top: -27px;
+        right: -27px;
+        bottom: -27px;
+        left: -27px;
+    }
+}
+
+.playlist {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+}
+
+.song {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 5vw;
+}
+
+/* lecteur */
+
+.rhap_container {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.rhap_time {
+    color: var(--third);
+}
+
+.rhap_progress-filled,
+.rhap_progress-indicator {
+    background: var(--third);
+}
+
+.rhap_download-progress,
+.rhap_progress-bar-show-download {
+    background-color: var(--secondary);
+}
+
+.rhap_main-controls-button,
+.rhap_main-controls-button:hover,
+.rhap_main-controls-button:active,
+.rhap_volume-button:hover,
+.rhap_volume-button:active,
+.rhap_volume-button,
+.rhap_volume-button:hover,
+.rhap_volume-button:active {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.rhap_repeat-button,
+.rhap_repeat-button:hover,
+.rhap_repeat-button:active .rhap_volume-button {
+    color: var(--third);
+}
+
+.rhap_volume-bar,
+.rhap_volume-indicator {
+    background-color: var(--third);
+}
+
+button:hover,
+button:active,
+button:focus {
+    border: 0 solid transparent;
+}
+
+/* Mini / Full */
+
+.minifull {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--nav);
+    padding-bottom: 2vh;
+    width: 100%;
+}
+
+.mini,
+.full {
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.border {
+    transform: scale(0);
+    transition: 0.5s ease-out;
+    transform-origin: top;
+    height: 0.5vh;
+    padding: 0;
+    margin: 0;
+}
+
+.sorry {
+    color: var(--white);
+    font-size: 7vw;
+    text-align: center;
+}
+
+.border.active {
+    background-color: var(--secondary);
+    transition: 1s ease-out;
+    transform: scale(1);
+    transform-origin: center top;
+}
+
+.playlist-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.song-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+.titre {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 100;
+}
+
+.artiste {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 700;
+}
