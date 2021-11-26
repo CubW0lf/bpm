@@ -17,7 +17,9 @@
     font-size: 3vw;
     font-family: var(--font);
     text-decoration: none;
-    color: var(--white);
+    color: var(--third);
+    text-transform: uppercase;
+    opacity: 0.9;
 }
 
 .logouser {

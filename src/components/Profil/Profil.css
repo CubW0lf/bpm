@@ -1,120 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-.profildiv{
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color : var(--white);
-  width: 100%;
+.Profil {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    width: 100%;
 }
-.profilUser{
-  width: 12rem;
-  height: 12rem;
-  border-radius: 90px;
-  margin-bottom: 2rem;
-}
-
-.profildiv1{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(#e86b57, #c452a7, #9868d9);
-  border-radius: 10px;
-  width: 100%;
-  height: 50vh;
-  border : solid white 1px; 
-  position: relative;
+.user {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 90px;
+    margin-bottom: 2rem;
 }
 
-.edit{
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--secondary) 0, var(--third) 95%);
+    border-radius: 10px;
+    width: 100%;
+    height: 50vh;
+    border: solid white 1px;
+    position: relative;
 }
 
-.detailprofil{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-  text-align: end;
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
+.edit {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
-.profilh4{
-  color : wheat;
-}
-.note{
-  font-size: 30px;
-}
-.profilh2{
-  text-shadow: #796161 1px 1px 1px;
-}
-.profilh4{
-  font-size: 15px;
+.detailprofil {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    text-align: end;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
 }
 
-.profilmusicfavoris{
-  margin-top: 1rem;
-  width: 100%;
-  border: solid white 1px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  background: linear-gradient(#6f7de0, #ae55cb, #d65bab);
+.profilh4 {
+    color: wheat;
+}
+.note {
+    font-size: 30px;
+}
+.profilh2 {
+    text-shadow: #796161 1px 1px 1px;
+}
+.profilh4 {
+    font-size: 15px;
 }
 
-.ulprofil{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1rem;
-  padding-left: 0;
-  list-style: none;
-  width: 100%;
-  position: relative;
+.profilmusicfavoris {
+    margin-top: 1rem;
+    width: 100%;
+    border: solid white 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(var(--secondary) 0, var(--third) 95%);
+    /* background: linear-gradient(#6f7de0, #ae55cb, #d65bab); */
 }
 
-.liprofil{
-  width: 100%;
-  font-size: 14px;
-  padding-top: 1rem;
+.ulprofil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    list-style: none;
+    width: 100%;
+    position: relative;
+}
+
+.liprofil {
+    width: 100%;
+    font-size: 14px;
+    padding-top: 1rem;
 }
 
 .liprofil p {
-  text-align: start;
+    text-align: start;
 }
 
-hr{
-  width: 100%;
-  height: 1px;
-  margin-top: 1rem;
+hr {
+    width: 100%;
+    height: 1px;
+    margin-top: 1rem;
 }
 
-.favoris{
-  font-size: 35px;
-  margin-right: 1rem;
-  color : white;
+.favoris {
+    font-size: 35px;
+    margin-right: 1rem;
+    color: white;
 }
 
-.close{
- 
- font-size: 20px;
- position: absolute;
- 
- right: 10px;
+.close {
+    font-size: 20px;
+    position: absolute;
 
-
+    right: 10px;
 }
 
 @media screen and (min-width: 500px) {
-  .profildiv {
-    padding-left: 45rem;
-    padding-right: 45rem;
-  }
+    .profildiv {
+        padding-left: 45rem;
+        padding-right: 45rem;
+    }
 }

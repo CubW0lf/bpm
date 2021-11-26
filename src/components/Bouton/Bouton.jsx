@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import songs from "../../songs";
 import Lecteur from "../Lecteur/Lecteur";
+import watchSvg from "../../assets/images/watch.png";
 import "./Bouton.css";
 
 const Bouton = () => {
     const [mood, setMood] = useState("");
     const [animation, setAnimation] = useState(false);
     const [animationHeart, setAnimationHeart] = useState(false);
+    const [watch, setWatch] = useState(false);
     const [bpm, setBpm] = useState(0);
     const [fork, setFork] = useState([]);
     const [playlist, setPlaylist] = useState([]);
+    const [current, setCurrent] = useState(0);
 
     // const musicFork = ["60-85", "85-110", "110-135", "135-160"];
     const handleBpm = () => {
@@ -17,9 +20,9 @@ const Bouton = () => {
             setAnimationHeart(true);
             setAnimation(false);
             setTimeout(() => {
-                setBpm(Math.floor(Math.random() * (100 - 60) + 60));
                 setAnimationHeart(false);
                 setAnimation(true);
+                setBpm(Math.floor(Math.random() * (100 - 60) + 60));
             }, 5000);
         } else if (!animationHeart && animation) {
             setAnimationHeart(false);
@@ -33,9 +36,9 @@ const Bouton = () => {
             setBpm(0);
             setMood("");
         } else {
-            if (bpm <= 69) {
+            if (bpm <= 70) {
                 setMood("Meditation");
-                setFork([0, 85]);
+                setFork([40, 85]);
             } else if (bpm >= 70 && bpm <= 79) {
                 setMood("Chill");
                 setFork([85, 110]);
@@ -56,12 +59,39 @@ const Bouton = () => {
                 list.push(songs[i]);
             }
         }
+        function shuffle(array) {
+            var currentIndex = array.length,
+                temporaryValue,
+                randomIndex;
+
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+        shuffle(list);
         setPlaylist(list);
-    }, [fork]);
+    }, [fork, current]);
+
+    const handleWatch = () => {
+        setWatch(!watch);
+    };
 
     return (
         <>
-            <p className="connexiontexte">Veuillez connecter votre SmartWatch.</p>
+            <p className="connexiontexte" onClick={handleWatch}>
+                {watch ? (
+                    <img src={watchSvg} alt="Montre Connectée" style={{ fill: "pink" }} className="watch" />
+                ) : (
+                    "Veuillez connecter votre SmartWatch."
+                )}
+            </p>
             <div className="Bouton">
                 <span className="mood">{mood !== "" ? mood : ""}</span>
                 <div className={`inner ${animation ? "pulse" : ""}`} onClick={handleBpm}>
@@ -79,9 +109,9 @@ const Bouton = () => {
                 {playlist.length !== 0 ? (
                     <div className="song">
                         <div className="song-meta">
-                            <span>{playlist[0].Auteur}</span> <span>{playlist[0].Titre}</span>
+                            <span>{playlist[current].Auteur}</span> <span>{playlist[current].Titre}</span>
                         </div>
-                        <Lecteur autoplay playlist={playlist} />
+                        <Lecteur autoplay playlist={playlist} current={current} setCurrent={setCurrent} />
                     </div>
                 ) : (
                     ""
