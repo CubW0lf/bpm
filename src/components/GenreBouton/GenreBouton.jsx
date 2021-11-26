@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./genreBouton.css";
 import Pop from "../../assets/pop.mp3"
 import Rock from "../../assets/rock.mp3"
@@ -10,7 +11,7 @@ import Funk from "../../assets/funk.mp3"
 import Classique from "../../assets/classique.mp3"
 
 const GenreBouton = () => {
-// const [audio, setAudio] = useState(false);
+const [audio, setAudio] = useState(false);
   
   const playSongPop = () => {
     const song = new Audio();
@@ -67,17 +68,31 @@ const GenreBouton = () => {
   };
 
   return(
+  <div className='allcontainerbouton'>
     <div className='containerGenreBouton'>
      <button className='genreBouton' onClick={playSongPop}>Pop</button>
-     <button  className='butonGenreRock' onClick={playSongRock}>Rock</button>
+     <button  className='butonGenreRock' onClick={playSongRock}>Rock{audio}</button>
+    </div>
+
+    <div className='containerGenreBouton'>
      <button  className='butonGenreRap' onClick={playSongRap}>Rap</button>
      <button  className='butonGenreRnb' onClick={playSongRnb}>Rnb</button>
+    </div>
+
+    <div className='containerGenreBouton'>
      <button  className='butonGenreDance' onClick={playSongDance}>Dance</button>
      <button  className='butonGenreVariete' onClick={playSongVariete}>Variete</button>
+    </div>
+
+    <div className='containerGenreBouton'>
      <button  className='butonGenreAmbient' onClick={playSongAmbient}>Ambient</button>
      <button  className='butonGenreFunk' onClick={playSongFunk}>Funk</button>
-     <button  className='butonGenreClassique' onClick={playSongClassique}>Classique</button>
-     </div>
+    </div>
+ 
+    <div className='containerGenreBoutonclassique'>
+     <button  className='butonGenreClassique' onClick={playSongClassique}>Classique</button> 
+    </div>
+  </div>    
     )
 };
 
