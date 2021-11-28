@@ -12,6 +12,10 @@
     --nav: #363133;
     --secondary: #fc387f;
     --third: #faa658;
+    --meditation: #67ff75;
+    --chill: #ff876e;
+    --casual: #faa658;
+    --energy: #45edff;
     --white: white;
     --font: "Montserrat", sans-serif;
 }
@@ -63,9 +67,10 @@ h6 {
 
 html,
 body {
-    min-height: 100%;
+    min-height: 101vh;
     max-width: 100%;
     overflow-x: hidden;
+    background: var(--body);
 }
 
 body {

@@ -111,9 +111,16 @@ const Main = () => {
         <>
             <SubMenu active={active} setActive={setActive} />
             <main>
-                <Watch watch={watch} handleWatch={handleWatch} />
+                <Watch watch={watch} handleWatch={handleWatch} active={active} />
                 {active === "mini" ? (
-                    <Bouton mood={mood} animationHeart={animationHeart} handleBpm={handleBpm} animation={animation} />
+                    <Bouton
+                        mood={mood}
+                        animationHeart={animationHeart}
+                        handleBpm={handleBpm}
+                        animation={animation}
+                        active={active}
+                        play={play}
+                    />
                 ) : (
                     <Playlist playlist={playlist} current={current} setCurrent={setCurrent} />
                 )}
@@ -122,9 +129,8 @@ const Main = () => {
                     playlist={playlist}
                     current={current}
                     setCurrent={setCurrent}
-                    active={active}
-                    play={play}
                     setPlay={setPlay}
+                    mood={mood}
                 />
             </main>
         </>

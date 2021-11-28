@@ -2,7 +2,7 @@
 
 .Lecteur {
     width: 100% !important;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     display: flex;
@@ -15,12 +15,14 @@
     color: var(--white);
     font-family: var(--font);
     font-size: 5vw;
+    width: 100%;
 }
 
 .song-meta {
     padding: 1vh;
     text-align: center;
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -30,6 +32,50 @@
     background-color: transparent;
     box-shadow: none;
     padding: 1vh;
+}
+
+.song.meditation .rhap_time {
+    color: var(--meditation);
+    transition: 0.5s;
+}
+
+.song.meditation .rhap_progress-filled,
+.song.meditation .rhap_progress-indicator {
+    background: var(--meditation);
+    transition: 0.5s;
+}
+
+.song.chill .rhap_time {
+    color: var(--chill);
+    transition: 0.5s;
+}
+
+.song.chill .rhap_progress-filled,
+.song.chill .rhap_progress-indicator {
+    background: var(--chill);
+    transition: 0.5s;
+}
+
+.song.casual .rhap_time {
+    color: var(--casual);
+    transition: 0.5s;
+}
+
+.song.casual .rhap_progress-filled,
+.song.casual .rhap_progress-indicator {
+    background: var(--casual);
+    transition: 0.5s;
+}
+
+.song.energy .rhap_time {
+    color: var(--energy);
+    transition: 0.5s;
+}
+
+.song.energy .rhap_progress-filled,
+.song.energy .rhap_progress-indicator {
+    background: var(--energy);
+    transition: 0.5s;
 }
 
 .rhap_time {
@@ -43,7 +89,7 @@
 
 .rhap_download-progress,
 .rhap_progress-bar-show-download {
-    background-color: var(--secondary);
+    background-color: var(--nav);
 }
 
 .rhap_main-controls-button,
@@ -73,6 +119,34 @@ button:hover,
 button:active,
 button:focus {
     border: 0 solid transparent;
+}
+
+.rhap_container svg {
+    font-size: 30vw;
+    width: 100%;
+    height: 100%;
+}
+
+.rhap_container button {
+    width: 10vh;
+    height: 10vh;
+    font-size: 10vh;
+}
+
+.rhap_additional-controls,
+.rhap_rewind-button,
+.rhap_forward-button,
+.rhap_volume-controls {
+    display: none;
+}
+
+.rhap_controls-section,
+.rhap_main-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 @media (min-device-width: 1224px) {

@@ -28,6 +28,26 @@
     animation: playing3 0.6s infinite ease-in-out;
 }
 
+.Eq.meditation .bar {
+    background-color: var(--meditation);
+    transition: 0.5s;
+}
+
+.Eq.chill .bar {
+    background-color: var(--chill);
+    transition: 0.5s;
+}
+
+.Eq.casual .bar {
+    background-color: var(--third);
+    transition: 0.5s;
+}
+
+.Eq.energy .bar {
+    background-color: var(--energy);
+    transition: 0.5s;
+}
+
 @keyframes playing {
     from {
         height: 0;
