@@ -1,0 +1,23 @@
+.watch {
+    width: 46px;
+    height: 46px;
+}
+
+.connexiontexte {
+    color: #999;
+    margin-top: 2vh;
+    position: relative;
+    z-index: 2;
+}
+
+@media screen and (min-device-width: 1367px) {
+    .connexiontexte {
+        font-size: 2vw;
+        opacity: 0.5;
+    }
+
+    .watch {
+        width: 23px;
+        height: 23px;
+    }
+}

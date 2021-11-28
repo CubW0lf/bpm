@@ -1,23 +1,35 @@
-import "./NavBar.css";
-import { AiOutlineMenu } from "react-icons/ai";
-import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { GrMenu } from "react-icons/gr";
+import { useState } from "react";
+import "./NavBar.css";
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
+    const [displayMenu, setDisplayMenu] = useState(false);
+
+    const handleDisplay = () => {
+        setDisplayMenu(!displayMenu);
+    };
+
     return (
-        <nav>
-            <div className="header-container">
-                <Link to="/genre" className="white">
-                    <AiOutlineMenu className="burger" />
-                </Link>
+        <div className="menu-wrapper">
+            <nav className={`full ${displayMenu ? "display" : "hidden"}`}>
+                <ul>
+                    <li>Comment Ca marche ?</li>
+                    <li>Configuration</li>
+                    {user ? "" : "Inscription"}
+                    <li>{user ? "Déconnexion" : "Connexion"}</li>
+                </ul>
+            </nav>
+            <nav className="minified">
+                <GrMenu className="burger" onClick={handleDisplay} />
                 <Link to={"/"} className="logo">
                     <h1>Beat Per Move</h1>
                 </Link>
                 <Link to={"/user"}>
-                    <FaUserAlt className="logouser" />
+                    <img src={user && user[0].picture.large} alt={user && user[0].name.first} className="user-thumbnail" />
                 </Link>
-            </div>
-        </nav>
+            </nav>
+        </div>
     );
 };
 

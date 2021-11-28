@@ -1,66 +1,68 @@
 import "./Profil.css";
-import nicolas from "../../assets/images/nicolas.png";
 import { RiHeartsFill } from "react-icons/ri";
-import { BsMusicNoteList } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
-import { MdEdit } from "react-icons/md";
+import { CgFacebook } from "react-icons/cg";
+import { FaInstagram } from "react-icons/fa";
+import { ImTwitter } from "react-icons/im";
+import { SiLinkedin } from "react-icons/si";
 
-const Profil = () => {
+const Profil = ({ user }) => {
     return (
         <div className="Profil">
-            <div className="profil">
-                <MdEdit className="edit" />
-                <img src={nicolas} alt="user" className="user" />
-
-                <div className="detailprofil">
-                    <BsMusicNoteList className="note" />
-                    <div>
-                        <h2 className="profilh2">NICO LE BELGE</h2>
-                        <h4 className="profilh4">MOOD PRÉFÉRÉ : CHILL</h4>
+            {user && (
+                <div className="infos-profil">
+                    <div className="image-container">
+                        <img src={user[0].picture.large} alt="profil utilisateur" />
+                    </div>
+                    <h2>
+                        {user[0].name.first} {user[0].name.last}
+                    </h2>
+                    <span className="email">{user[0].email}</span>
+                    <span>{user[0].cell}</span>
+                    <span>MOOD PRÉFÉRÉ : CHILL</span>
+                    <div className="socials">
+                        <CgFacebook />
+                        <FaInstagram />
+                        <ImTwitter />
+                        <SiLinkedin />
                     </div>
                 </div>
-            </div>
+            )}
 
-            <div className="profilmusicfavoris">
+            <div className="favorites-songs">
                 <RiHeartsFill className="favoris" />
-                <ul className="ulprofil">
+                <ul>
                     <li className="liprofil">
                         <IoIosClose className="close" />
-                        <p>Alors la zone</p>
-                        <p>JUL</p>
+                        <span className="titre">Alors la zone</span>
+                        <span className="artiste">JUL</span>
                     </li>
-                    <hr></hr>
 
                     <li className="liprofil">
                         <IoIosClose className="close" />
-                        <p>Anissa </p>
-                        <p>WEJDENE</p>
+                        <span className="titre">Anissa </span>
+                        <span className="artiste">WEJDENE</span>
                     </li>
-                    <hr></hr>
                     <li className="liprofil">
                         <IoIosClose className="close" />
-                        <p>Ma meilleure amie</p>
-                        <p>LORIE</p>
+                        <span className="titre">Ma meilleure amie</span>
+                        <span className="artiste">LORIE</span>
                     </li>
-                    <hr></hr>
                     <li className="liprofil">
                         <IoIosClose className="close" />
-                        <p>Libérée, délivrée</p>
-                        <p>LA REINE DES NEIGES</p>
+                        <span className="titre">Libérée, délivrée</span>
+                        <span className="artiste">LA REINE DES NEIGES</span>
                     </li>
-                    <hr></hr>
                     <li className="liprofil">
                         <IoIosClose className="close" />
-                        <p>We are the champions</p>
-                        <p>QUEEN</p>
+                        <span className="titre">We are the champions</span>
+                        <span className="artiste">QUEEN</span>
                     </li>
-                    <hr></hr>
                     <li className="liprofil">
                         <IoIosClose className="close" />
-                        <p>Bohemian Rhapsody</p>
-                        <p>QUEEN</p>
+                        <span className="titre">Bohemian Rhapsody</span>
+                        <span>QUEEN</span>
                     </li>
-                    <hr></hr>
                 </ul>
             </div>
         </div>
