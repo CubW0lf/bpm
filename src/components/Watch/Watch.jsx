@@ -1,14 +1,19 @@
 import React from "react";
 import watchSvg from "../../assets/images/watch.png";
+import noWatchSvg from "../../assets/images/no-watch.png";
 import "./Watch.css";
 
-const Watch = ({ watch, handleWatch }) => {
+const Watch = ({ watch, handleWatch, active }) => {
     return (
-        <p className="connexiontexte" onClick={handleWatch}>
-            {watch ? (
-                <img src={watchSvg} alt="Montre Connectée" style={{ fill: "pink" }} className="watch" />
+        <p className="Watch" onClick={handleWatch}>
+            {active !== "full" ? (
+                watch ? (
+                    <img src={watchSvg} alt="Montre Connectée" className="watch" />
+                ) : (
+                    <img src={noWatchSvg} alt="Montre Connectée" className="no-watch" />
+                )
             ) : (
-                "Veuillez connecter votre SmartWatch."
+                ""
             )}
         </p>
     );

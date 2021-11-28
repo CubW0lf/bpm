@@ -11,6 +11,12 @@ import "./desktop.css";
 function App() {
     const [user, setUser] = useState();
 
+    // window.addEventListener("load", function () {
+    //     setTimeout(function () {
+    //         window.scrollTo(0, 1);
+    //     }, 0);
+    // });
+
     useEffect(() => {
         const randomUser = "https://randomuser.me/api/";
 
