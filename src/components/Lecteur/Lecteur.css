@@ -185,12 +185,6 @@ button:focus {
         height: 100%;
     }
 
-    .rhap_container button {
-        width: 18px;
-        height: 18px;
-        font-size: 18px;
-    }
-
     .rhap_stacked,
     .rhap_controls-section {
         margin-top: 0 !important;
