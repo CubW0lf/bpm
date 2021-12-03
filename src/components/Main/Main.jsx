@@ -6,12 +6,12 @@ import SubMenu from "../SubMenu/SubMenu";
 import Watch from "../Watch/Watch";
 import Playlist from "../Playlist/Playlist";
 import Bouton from "../Bouton/Bouton";
+import PlaylistContext from "../../contexts/PlaylistContext";
 
 const Main = () => {
     const [mood, setMood] = useState("");
     const [animation, setAnimation] = useState(false);
     const [animationHeart, setAnimationHeart] = useState(false);
-    const [watch, setWatch] = useState(false);
     const [bpm, setBpm] = useState(0);
     const [fork, setFork] = useState([]);
     const [playlist, setPlaylist] = useState([]);
@@ -103,37 +103,29 @@ const Main = () => {
         setPlaylist(list);
     }, [fork, current]);
 
-    const handleWatch = () => {
-        setWatch(!watch);
-    };
-
     return (
-        <>
-            <SubMenu active={active} setActive={setActive} />
+        <PlaylistContext.Provider
+            value={{
+                mood,
+                animation,
+                animationHeart,
+                playlist,
+                current,
+                handleBpm,
+                setCurrent,
+                active,
+                setActive,
+                play,
+                setPlay,
+            }}
+        >
+            <SubMenu />
             <main>
-                <Watch watch={watch} handleWatch={handleWatch} active={active} />
-                {active === "mini" ? (
-                    <Bouton
-                        mood={mood}
-                        animationHeart={animationHeart}
-                        handleBpm={handleBpm}
-                        animation={animation}
-                        active={active}
-                        play={play}
-                    />
-                ) : (
-                    <Playlist playlist={playlist} current={current} setCurrent={setCurrent} />
-                )}
-                <Lecteur
-                    autoplay
-                    playlist={playlist}
-                    current={current}
-                    setCurrent={setCurrent}
-                    setPlay={setPlay}
-                    mood={mood}
-                />
+                <Watch />
+                {active === "mini" ? <Bouton /> : <Playlist />}
+                <Lecteur />
             </main>
-        </>
+        </PlaylistContext.Provider>
     );
 };
 

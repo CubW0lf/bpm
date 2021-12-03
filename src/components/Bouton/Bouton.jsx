@@ -1,7 +1,10 @@
-import "./Bouton.css";
+import { useContext } from "react";
+import PlaylistContext from "../../contexts/PlaylistContext";
 import Eq from "../Eq/Eq";
+import "./Bouton.css";
 
-const Bouton = ({ mood, animationHeart, handleBpm, animation, play, active }) => {
+const Bouton = () => {
+    const { mood, animationHeart, handleBpm, animation } = useContext(PlaylistContext);
     // const musicFork = ["60-85", "85-110", "110-135", "135-160"];
 
     return (
@@ -13,7 +16,7 @@ const Bouton = ({ mood, animationHeart, handleBpm, animation, play, active }) =>
                     } ${mood === "Meditation" ? "meditation" : ""} ${mood === "Energy" ? "energy" : ""}`}
                     onClick={handleBpm}
                 >
-                    <Eq play={play} active={active} mood={mood} />
+                    <Eq />
                     <span
                         className={`mood ${mood === "Chill" ? "chill" : ""} ${mood === "Casual" ? "casual" : ""} ${
                             mood === "Meditation" ? "meditation" : ""

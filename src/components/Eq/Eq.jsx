@@ -1,7 +1,9 @@
-import React from "react";
+import { useContext } from "react";
+import PlaylistContext from "../../contexts/PlaylistContext";
 import "./Eq.css";
 
-const Eq = ({ play, active, mood }) => {
+const Eq = () => {
+    const { play, active, mood } = useContext(PlaylistContext);
     return play ? (
         active === "mini" ? (
             <div

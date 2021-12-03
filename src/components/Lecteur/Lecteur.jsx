@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import PlaylistContext from "../../contexts/PlaylistContext";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import "./Lecteur.css";
 
-const Lecteur = ({ playlist, current, setCurrent, setPlay, mood }) => {
+const Lecteur = () => {
+    const { playlist, current, setCurrent, setPlay, mood } = useContext(PlaylistContext);
+
     const prev = () => {
         if (current > 0) {
             setCurrent(current - 1);

@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import PlaylistContext from "../../contexts/PlaylistContext";
 import "./SubMenu.css";
 
-const SubMenu = ({ active, setActive }) => {
+const SubMenu = () => {
+    const { active, setActive } = useContext(PlaylistContext);
+
     return (
         <div className="minifull">
             <div className="mini" onClick={() => setActive("mini")}>
