@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import PlaylistContext from "../../contexts/PlaylistContext";
 import "./Playlist.css";
 
-const Playlist = ({ playlist, current, setCurrent }) => {
+const Playlist = () => {
+    const { playlist, current, setCurrent } = useContext(PlaylistContext);
+
     return (
         <div className="Playlist">
             {playlist.length !== 0 ? (
